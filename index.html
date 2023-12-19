@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruds Operation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Star header -->
+    <div class="container">
+        <header>
+            <h1>cruds</h1>
+            <h3>product manager system</h3>
+        </header>
+    </div>
+    <!-- End header -->
+
+    <!-- Start inputs -->
+    <div class="container">
+        <div class="inputs">
+            <!-- title -->
+            <div class="title">
+                <input class="inp" type="text" name="title" id="title" placeholder="Title">
+            </div>
+            <!-- price -->
+            <div class="totale">
+                <input onkeyup="getTotale()" class="one" type="number" name="price" id="price" min="0" placeholder="Price">
+
+                <input onkeyup="getTotale()" class="one"  type="number" name="taxes" id="taxes" min="0" placeholder="Taxes">
+
+                <input onkeyup="getTotale()" class="one"  type="number" name="ads" id="ads" min="0"  placeholder="Ads">
+
+                <input onkeyup="getTotale()" class="one"  type="number" name="discount" id="discount" min="0"  placeholder="Discount">
+
+                <span id="totale"></span>
+            </div>
+            <!-- count -->
+            <div class="count">
+                <input class="inp" type="number" id="count" placeholder="count">
+            </div>
+            <!-- category -->
+            <div class="category">
+                <input class="inp" type="text" id="category" placeholder="Category">
+            </div>
+
+                <button onclick="creatData()" id="creat" type="submit">creat</button>
+            
+        </div>
+        
+    </div>
+    <!-- End inputs -->
+
+    <!-- Start output -->
+    <div class="container">
+        <div class="output">
+            <div class="search">
+                <input onkeyup="searchData(this.value)" type="search" name="search" id="search" placeholder="Search">
+            </div>
+            <div class="srch">
+                <button onclick="searchInput(id)" id="searchTitle" type="submit">search by title</button>
+                <button onclick="searchInput(id)" id="searchCategory"  type="submit">search by category</button>
+            </div>
+            <div class="delete"></div>
+        </div>
+    </div>
+    <!-- End output -->
+    
+    <!-- Start Result Final -->
+    <div class="container">
+        <div class="resultFinal">
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- End Result Final -->
+    <script src="main.js"></script>
+</body>
+</html>
